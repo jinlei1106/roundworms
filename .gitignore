@@ -1,0 +1,15 @@
+db.sqlite3
+django/
+.idea/
+./initial_data.*
+logs/*.log*
+venv/
+__pycache__/
+.coverage
+.vscode/
+*.py[co]
+*.swp
+*.swn
+*.swo
+*.swm
+*.pid

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}首页{% endblock %}
+{% block self_css %}
+<link href="{% static 'css/self/home.css' %}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<h2 class="text-center">我们的目标是：成为你肚子里的蛔虫</h2>
+<div class="text-center">
+    <a class="btn btn-primary" href="/test/" role="button">测试你今天的心情</a>
+</div>
+{% endblock %}

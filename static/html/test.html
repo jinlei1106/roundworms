@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}测试{% endblock %}
+{% block self_css %}
+<link href="{% static 'css/self/test.css' %}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<h2 class="text-center">悄悄输入你现在最想说的话<br>
+    <small>如果不想说话，就点<a class="btn btn-link" href="/" role="button">这里...</a></small>
+</h2>
+<div class="text-center">
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="text" class="form-control" id="userinput" placeholder="想说的话...">
+        </div>
+        <a class="btn btn-success" href="/result/" role="button">测试</a>
+    </form>
+</div>
+{% endblock %}
