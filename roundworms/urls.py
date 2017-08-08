@@ -18,9 +18,13 @@ from django.conf.urls import url
 from django.contrib import admin
 from pageviews.home import HomePageView
 from pageviews.test import TestPageView
+from pageviews.result import ResultPageView
+from pageviews.joke import JokePageView
 
 urlpatterns = [
     url(r'^$', HomePageView.as_view()),
     url(r'^test/$', TestPageView.as_view()),
+    url(r'^result/$', ResultPageView.as_view()),
+    url(r'^joke/$', JokePageView.as_view()),
     url(r'^admin/', admin.site.urls),
 ]

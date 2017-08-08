@@ -1,0 +1,17 @@
+.base-body {
+    margin: 50px 100px;
+}
+.head-text {
+    border-left: 10px solid #4F9CEE;
+    padding-left: 20px;
+}
+.explanation {
+    width: auto;
+    margin: 50px; 50px;
+    font-size: 18px;
+    background-color: #DFFFDF;
+}
+.joke-link {
+    font-size: 14px;
+    margin-left: 150px;
+}
