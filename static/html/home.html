@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends basehtml %}
 {% load staticfiles %}
 {% block title %}首页{% endblock %}
 {% block self_css %}
@@ -9,4 +9,5 @@
 <div class="text-center">
     <a class="btn btn-primary" href="/test/" role="button">测试你今天的心情</a>
 </div>
+<div class="text-center">{{ user_agent }}</div>
 {% endblock %}

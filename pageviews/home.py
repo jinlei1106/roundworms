@@ -1,5 +1,5 @@
-from django.views.generic import TemplateView
+from global_decorator import SelfTemplateView
 
 
-class HomePageView(TemplateView):
+class HomePageView(SelfTemplateView):
     template_name = 'home.html'

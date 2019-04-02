@@ -1,5 +1,5 @@
-from django.views.generic import TemplateView
+from global_decorator import SelfTemplateView
 
 
-class JokePageView(TemplateView):
+class JokePageView(SelfTemplateView):
     template_name = 'joke.html'

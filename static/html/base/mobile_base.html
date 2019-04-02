@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- 自定义的css -->
+        {% block self_css %}{% endblock %}
+    </head>
+    <body>
+        <div style="padding: 0 3.2%">
+            {% block body %}{% endblock %}
+        </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

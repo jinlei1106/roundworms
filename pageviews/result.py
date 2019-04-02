@@ -1,10 +1,10 @@
 import random
-from django.views.generic import TemplateView
+from global_decorator import SelfTemplateView
 
 from utils.docs import explanation_dict
 
 
-class ResultPageView(TemplateView):
+class ResultPageView(SelfTemplateView):
     template_name = 'result.html'
 
     def get_context_data(self, **kwargs):
