@@ -7,11 +7,18 @@
 }
 .explanation {
     width: auto;
-    margin: 50px; 50px;
+    margin: 50px 50px;
     font-size: 18px;
     background-color: #DFFFDF;
 }
 .joke-link {
     font-size: 14px;
     margin-left: 150px;
+}
+
+.joke-alert {
+    font-size: 12px;
+    color: #00b9ff;
+    cursor:pointer;
+    padding-left: 5px;
 }

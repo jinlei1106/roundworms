@@ -9,7 +9,17 @@
     <h2 class="head-text">{{ title }}</h2>
     <div class="explanation">
         {{ explanation }}
-        <span class="joke-link">觉得不准？就点<a class="btn btn-link" href="/joke/" role="button">这里...</a></span>
+        <span class="joke-link">觉得不准？就点<span class="joke-alert">这里...</span></span>
     </div>
 </div>
+{% endblock %}
+
+{% block self_script %}
+    <script>
+    $(function () {
+        $('.joke-alert').click(function () {
+            alert('哈哈哈哈哈哈，你还真信这能检测你的情绪啊！')
+        })
+    })
+    </script>
 {% endblock %}
