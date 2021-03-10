@@ -579,6 +579,33 @@ class HashDict(object):
             self.resize(self.size // 2)
 
 
+def find_substring(s: str, sub: str):
+    right_dict = {}
+    M = 0
+    for index, char in enumerate(sub):
+        M += 1
+        right_dict[char] = index
+    N = len(s)
+    if N < M:
+        return -1
+    i = 0
+    while i <= (N-M):
+        skip = 0
+        j = M - 1
+        while j >= 0:
+            if sub[j] != s[i+j]:
+                skip = j - right_dict.get(s[i+j], -1)
+                # 确保每次都要前进
+                if skip < 1:
+                    skip = 1
+                break
+            j -= 1
+        if skip == 0:
+            return i
+        i += skip
+    return -1
+
+
 def sort_run():
     print(max_common_divisor(56, 64))
     # alist = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49]
@@ -681,7 +708,7 @@ def sort_run():
     print(instance.vals)
 
 
-if __name__ == '__main__':
+def index_queue():
     index_minq = IndexMInQueue(10)
     for i in range(0, 10):
         value = (10 - i) * 10
@@ -709,3 +736,8 @@ if __name__ == '__main__':
     print(min_index)
     index_minq.insert(min_index, 66)
     a = '111'
+
+
+if __name__ == '__main__':
+    result = find_substring('FINDINAHAYSTACKNEEDLEINA', 'NEEDLE')
+    print(result)
